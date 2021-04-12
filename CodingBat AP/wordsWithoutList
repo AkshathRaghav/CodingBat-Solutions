@@ -1,0 +1,13 @@
+wordsWithoutList - 
+
+public List wordsWithoutList(String[] words, int len) {
+  ArrayList<String>  neya = new ArrayList<String>() ; 
+  for ( String i : words){ 
+    if (i.length() != len){ 
+      neya.add(i) ; 
+    } 
+    
+  } 
+  return neya ; 
+    
+}

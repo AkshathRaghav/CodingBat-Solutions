@@ -1,0 +1,21 @@
+sumHeights2 - 
+
+public int sumHeights2(int[] heights, int start, int end) {
+  int sum = 0 ; 
+  int check ; 
+  
+  
+  for ( int i = start ; i < end  ; i++ ) { 
+    check = heights[i] - heights[i+1] ; 
+    if (check < 0 ) { 
+      sum +=  ( Math.abs(check) * 2 ) ; 
+    }
+    else { 
+      sum += Math.abs(check) ; 
+    } 
+  } 
+  
+  
+  return sum ; 
+    
+}

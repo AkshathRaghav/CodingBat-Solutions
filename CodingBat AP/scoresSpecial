@@ -1,0 +1,19 @@
+scoresSpecial - 
+public int scoresSpecial(int[] a, int[] b) {
+  
+  return helper(a) + helper(b) ; 
+  
+}
+
+
+public int helper(int[] arr) { 
+  int check = 0 ; 
+  for ( int i : arr ){ 
+    if ( i % 10 == 0 ){ 
+      if ( i > check ){ 
+        check = i ; 
+      } 
+    } 
+  } 
+  return check ; 
+} 
