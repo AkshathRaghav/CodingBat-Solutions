@@ -1,0 +1,14 @@
+countHi 
+
+public int countHi(String str) {
+  
+  if ( str.length() == 0 ) { 
+    return 0 ; 
+  } 
+  int n  = (str.indexOf("hi"))  ; 
+  if ( str.indexOf("hi") != -1 ) { 
+    return 1 + countHi(str.substring(n+2))  ; 
+  } 
+  return 0 ; 
+  
+}

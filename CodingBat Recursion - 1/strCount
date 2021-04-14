@@ -1,0 +1,14 @@
+strCount
+
+public int strCount(String str, String sub) {
+  if (str.length() > sub.length()-1) { 
+    int x = str.indexOf(sub) ; 
+    if (x != -1) { 
+      return 1 + strCount(str.substring(x+sub.length()), sub) ; 
+    } 
+    return 0 ; 
+  }
+  return 0 ; 
+     
+  
+}

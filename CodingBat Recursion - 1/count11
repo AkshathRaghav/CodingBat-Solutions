@@ -1,0 +1,13 @@
+count11
+
+public int count11(String str) {
+  if (str.length() > 1 ) { 
+    if ( str.substring(0,1).equals("1") && str.substring(1,2).equals("1") ) { 
+      return 1 + count11(str.substring(2)) ; 
+    } 
+    return 0 + count11(str.substring(1)) ; 
+    
+  } 
+  return 0 ; 
+  
+}

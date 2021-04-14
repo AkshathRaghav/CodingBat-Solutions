@@ -1,0 +1,9 @@
+parenBit
+
+public String parenBit(String str) {
+  if ( str.length() > 2 ) { 
+    int x = str.indexOf("("), y = str.indexOf(")") ; 
+    return str.substring(x,y+1) ; 
+  } 
+  return "()" ; 
+}

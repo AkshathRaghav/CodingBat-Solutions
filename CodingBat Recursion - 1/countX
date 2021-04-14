@@ -1,0 +1,27 @@
+countX 
+
+public int countX(String str) {
+  String x = "x"; 
+  if (str.length() == 0 ) { 
+    return 0 ; 
+  } 
+  else if ( str.length() == 1 ) { 
+    if ( str.equals(x) ) { 
+      return 1; 
+    } 
+    else { 
+      return  0 ;
+    } 
+  } 
+  else { 
+    if ( (str.substring(0, 1).equals(x))) { 
+      return 1 + countX(str.substring(1)) ; 
+    }
+    else { 
+       return 0 + countX(str.substring(1)) ; 
+    }
+  }
+    
+      
+}
+	

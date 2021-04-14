@@ -1,0 +1,9 @@
+noX
+
+public String noX(String str) {
+  int x = str.indexOf("x") ;
+  if ( x != -1 ){  
+    return str.substring(0,x) + noX(str.substring(x+1)); 
+  } 
+  return str ;
+}

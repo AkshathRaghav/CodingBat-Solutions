@@ -1,0 +1,18 @@
+stringClean
+
+public String stringClean(String str) {
+  int test = str.indexOf(" ") ; 
+  if (test != -1 ) { 
+    return stringClean(str.substring(0,test)) + " " + stringClean(str.substring(test+1)) ; 
+  }
+  if ( str.length() > 1 ) { 
+    String check = str.substring(str.length()-1) ; 
+    int x = str.indexOf(check); 
+    if ( check.equals(str.substring(str.length()-2,str.length()-1))) {
+     return stringClean(str.substring(0,x)) + check  ;
+    }
+    return stringClean(str.substring(0,str.length()-1)) + check  ; 
+  } 
+  return str ;
+  
+}

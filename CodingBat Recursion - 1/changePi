@@ -1,0 +1,10 @@
+changePi
+
+public String changePi(String str) {
+  int x = str.indexOf("pi") ;
+  if ( x != -1 ){  
+    return str.substring(0, x) + "3.14" + changePi(str.substring(x+2)) ; 
+  } 
+  return str ; 
+  
+}
