@@ -1,0 +1,30 @@
+fix34 
+
+public int[] fix34(int[] nums) {
+  if ( nums.length == 0 ) { return new int[0] ; } 
+  int count = 0 ; 
+  int[] numing = new int[nums.length] ,backup = new int[nums.length] ; 
+  for (int i = 0 ; i < numing.length ; i++ ) { 
+    if ( nums[i] == 3 ) { 
+      numing[i] = 3; 
+       
+      numing[i+1] = 4   ; 
+    } 
+    else if ( nums[i] != 4 ) {
+      backup[count] = nums[i] ; 
+      count++ ; 
+    } 
+      
+  }
+  int check = 0  ; 
+  for (int i = 0 ; i < numing.length ; i++ ) { 
+    if ( numing[i] != 3 && numing[i] != 4 ) { 
+    numing[i] = backup[check] ; 
+    check++ ; 
+  } 
+  }
+
+    
+
+  return numing ; 
+}

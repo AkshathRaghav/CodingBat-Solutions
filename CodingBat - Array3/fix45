@@ -1,0 +1,31 @@
+fix45
+
+public int[] fix45(int[] nums) {
+  if ( nums.length == 0 ) { return new int[0] ; } 
+  int count = 0 ; 
+  int[] numing = new int[nums.length] ; 
+  int[] backup = new int[nums.length] ; 
+  for (int i = 0 ; i < numing.length ; i++ ) { 
+    if ( nums[i] == 4 ) { 
+      numing[i] = 4; 
+       
+      numing[i+1] = 5  ; 
+    } 
+    else if ( nums[i] != 5 ) {
+      backup[count] = nums[i] ; 
+      count++ ; 
+    } 
+      
+  }
+  int check = 0  ; 
+  for (int i = 0 ; i < numing.length ; i++ ) { 
+    if ( numing[i] != 4 && numing[i] != 5 ) { 
+    numing[i] = backup[check] ; 
+    check++ ; 
+  } 
+  }
+
+    
+
+  return numing ; 
+}

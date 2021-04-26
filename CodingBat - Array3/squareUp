@@ -1,0 +1,18 @@
+squareUp 
+
+public int[] squareUp(int n) {
+  int[] check = new int[n*n] ; 
+  int index = 0 , checker = 1; 
+
+  for (int i = 0 ; i < check.length ; i += n ) { 
+    index = i + n - 1;  
+    int count = 1 ; 
+    while ( count <= checker  ) { 
+      check[index] = count ; 
+      count++ ; 
+      index--; 
+    } 
+    checker++ ;
+  } 
+  return check ; 
+}

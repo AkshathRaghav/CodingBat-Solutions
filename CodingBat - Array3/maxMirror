@@ -1,0 +1,31 @@
+maxMirror 
+
+public int maxMirror(int[] nums) {
+  if ( nums.length <= 1  ) { return nums.length ; } 
+  int pointer = 0 , max = 0 , temp = 0; 
+  for (int i = 0 ; i < nums.length  ; i++ ) { 
+    
+      
+      for (int j = i+1 ; j < nums.length ; j++ ) { 
+        if ( nums[i] == nums[j] ) { 
+          pointer = j ; 
+          for (int k = i ; k <= j ; k++) { 
+            if ( nums[pointer] == nums[k]) { 
+              temp++ ; 
+              
+            } 
+            else { break ; } 
+            pointer-- ; 
+          }
+          if ( temp > max ) { max = temp ; } 
+         temp = 0 ;
+        } 
+      } 
+       
+    
+  } 
+
+  return max ; 
+      
+  
+}

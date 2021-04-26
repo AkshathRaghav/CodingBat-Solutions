@@ -1,0 +1,24 @@
+canBalance
+
+public boolean canBalance(int[] nums) {
+  int middle = (  nums.length - 1 ) / 2  ; 
+  int countleft = 0 , countright = 0 ; 
+  while (middle < nums.length ) { 
+    for ( int i = 0 ; i < middle ; i++ ) { 
+      countleft += nums[i] ; 
+    } 
+    for (int i = middle  ; i < nums.length ; i++ ) { 
+      countright += nums[i] ; 
+    } 
+    if ( countright == countleft ) { return true ; } 
+    middle++ ; 
+   countleft = 0 ; 
+   countright = 0  ; 
+  }
+ 
+
+  return false; 
+  
+
+}
+	

@@ -1,0 +1,23 @@
+maxSpan 
+
+public int maxSpan(int[] nums) {
+  
+  int  max = 0 ; 
+  if ( nums.length == 0 ) { return 0 ;} 
+  for (int i = 0 ; i < nums.length ; i++){ 
+    int end = nums.length - 1 ; 
+    int temp = nums[i] ; 
+    
+    while ( end > i && nums[end] != temp ) { 
+      end-- ; 
+    } 
+    
+    if ( end - i + 1 > max ) { 
+      max = end - i +1 ; 
+    }
+    
+  }
+  if ( max == 0 ) { return 1 ; } 
+  return max ; 
+  
+}
