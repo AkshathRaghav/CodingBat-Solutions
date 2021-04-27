@@ -1,0 +1,23 @@
+centeredAverage
+
+public int centeredAverage(int[] nums) {
+  int temp, index, count = 0 , sum = 0  ; 
+  for (int i = 0 ; i < nums.length; i++ ){ 
+    index = i  ; 
+    for (int j = i ; j < nums.length; j++ ){ 
+      if (nums[index] > nums[j]) { 
+        index = j ;  
+      } 
+    }
+     temp = nums[index] ; 
+      nums[index] = nums[i] ; 
+      nums[i] = temp ; 
+  }
+  for (int i = 1 ; i < nums.length - 1 ; i++) { 
+    sum += nums[i] ; 
+    count++ ;  
+  } 
+  return  sum / count ; 
+  
+  
+}
